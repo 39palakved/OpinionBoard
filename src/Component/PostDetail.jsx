@@ -15,7 +15,7 @@ const PostDetail = () => {
             }
     
             try {
-                const response = await fetch("http://localhost:8080/name", {
+                const response = await fetch("https://opinionbackend.onrender.com/name", {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ const PostDetail = () => {
         fetchUser();
     }, []); 
     const fetchpost =async()=>{
-        const response = await fetch(`http://localhost:8080/getpost/${postId}`,{
+        const response = await fetch(`https://opinionbackend.onrender.com/getpost/${postId}`,{
             method:'GET',
     
           })
@@ -51,7 +51,7 @@ const PostDetail = () => {
       fetchpost();
     },[])
     const handleVote =async(id,type)=>{
-        const response = await fetch(`http://localhost:8080/addpost/${id}/vote`,{
+        const response = await fetch(`https://opinionbackend.onrender.com/addpost/${id}/vote`,{
           method : 'PATCH',
           headers: {
             "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const PostDetail = () => {
       
     }
     const handleaddComment =async(id,user)=>{
-   const response = await  fetch(`http://localhost:8080/addpost/${id}/comments`,{
+   const response = await  fetch(`https://opinionbackend.onrender.com/addpost/${id}/comments`,{
        method:'PATCH',
        headers: {
         "Content-Type": "application/json",
