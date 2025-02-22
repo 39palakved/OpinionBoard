@@ -14,7 +14,7 @@ const EditPost = () => {
     setDesc(e.target.value);
   }
   const handlesavechange =async()=>{
-    const response = await fetch(`http://localhost:8080/editpost/${post._id}`,{
+    const response = await fetch(`https://opinionbackend.onrender.com/editpost/${post._id}`,{
       method:'PATCH',
       headers:{
         'Content-Type': 'application/json',
