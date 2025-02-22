@@ -9,7 +9,7 @@ const Login = () => {
     }
 const handleSubmit =async(e)=>{
      e.preventDefault();
-     const response = await fetch("http://localhost:8080/getuser",{
+     const response = await fetch("https://opinionbackend.onrender.com/getuser",{
         method : 'POST',
         headers:{
             'Content-Type' : 'application/json',
