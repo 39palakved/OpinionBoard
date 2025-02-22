@@ -19,7 +19,7 @@ const CreatePost = () => {
             return;
         }
     
-        const response = await fetch('http://localhost:8080/addpost', {
+        const response = await fetch('https://opinionbackend.onrender.com/addpost', {
             method: 'POST',
             body: JSON.stringify(postdata),
             headers: {
