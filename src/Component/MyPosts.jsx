@@ -7,7 +7,7 @@ const MyPosts = () => {
     const [totalPages, setTotalPages] = useState(1);
 
     const getmypost = async (page = 1) => {
-        const response = await fetch(`http://localhost:8080/myposts?page=${page}&limit=5`, {
+        const response = await fetch(`https://opinionbackend.onrender.com/myposts?page=${page}&limit=5`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -30,7 +30,7 @@ const MyPosts = () => {
     }, [currentPage]);
 
     const handleClick = async (id) => {
-        const response = await fetch(`http://localhost:8080/deletepost/${id}`, {
+        const response = await fetch(`https://opinionbackend.onrender.com/deletepost/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
