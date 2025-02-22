@@ -18,7 +18,7 @@ const Home = () => {
             }
 
             try {
-                const response = await fetch("http://localhost:8080/name", {
+                const response = await fetch("https://opinionbackend.onrender.com/name", {
                     method: "GET",
                     headers: { Authorization: `Bearer ${token}` },
                 });
@@ -45,7 +45,7 @@ const Home = () => {
 
             try {
                 const response = await fetch(
-                    `http://localhost:8080/getpost?page=${currentPage}&limit=6`,
+                    `https://opinionbackend.onrender.com/getpost?page=${currentPage}&limit=6`,
                     {
                         method: "GET",
                         headers: { Authorization: `Bearer ${token}` },
